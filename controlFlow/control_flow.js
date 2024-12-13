@@ -40,8 +40,37 @@ switch (userType){
         userCategory = "Unknown";        
 }
 
+let isAuthenticated = true;
+let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log ("Access level: ", accessLevel);
 console.log ("User Message: ", userMessage);
 console.log ("User Category: ", userCategory);
+console.log("Authentication Status:", authenticationStatus);
+
+
+
+let roleInOrganization = "Enrolled Member";
+let organizationUserPrivelegs;
+
+switch (roleInOrganization){
+    case "Employee":
+        organizationUserPrivelegs = "You have full Diatery Servives access";
+        break;
+    case "Enrolled Member":
+        organizationUserPrivelegs = "You have full Diatery Servives access and one-on-one interaction with a dietician";
+        break;
+    case "Subscriber":
+        organizationUserPrivelegs = "You have a partial access to Diatery Servives";
+        break;
+    case "Non-Subscriber":
+        organizationUserPrivelegs = "You need to enroll any other role to get an access";
+        break;
+    default:
+        organizationUserPrivelegs = "Unsupported role was caught";
+}
+
+console.log("You are ",roleInOrganization, " ", organizationUserPrivelegs);
+
+
 
