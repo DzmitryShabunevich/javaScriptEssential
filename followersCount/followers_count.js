@@ -10,7 +10,6 @@ function displayCount(){
     document.getElementById('countDisplay').innerHTML=count;
 }
 
-
 function checkCountValue(){
     if ( count === 10 ){
         alert("Your Instagram post gained 10 followers! Congratulations!");
