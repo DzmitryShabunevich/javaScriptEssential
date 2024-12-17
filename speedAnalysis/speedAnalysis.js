@@ -15,10 +15,12 @@ function startTest(){
 
 
 function endTest(){
-    endtTime = new Date().getTime();
+    endTime = new Date().getTime();
     // Disable user input
     document.getElementById("userInput").readOnly = true;
     // Calculate time elapsed and words per minute (WPM)
+    // console.log(startTime);
+    // console.log(endTime);
     var timeElapsed = (endTime - startTime) / 1000; // in seconds
     var userTypedText = document.getElementById("userInput").value;
     var textLength = userTypedText.length;
